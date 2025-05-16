@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Discord (PeerJS + Rooms)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Mini Discord</h1>
+
+  <div id="join-section">
+    <input type="text" id="roomInput" placeholder="Oda adı girin" />
+    <input type="text" id="nameInput" placeholder="Adınız" />
+    <button id="joinBtn">Odaya Katıl</button>
+  </div>
+
+  <div id="app" style="display: none;">
+    <p><strong>Senin ID:</strong> <span id="my-id">Yükleniyor...</span>
+      <button onclick="copyMyId()">Kopyala</button></p>
+
+    <div id="videoContainer">
+      <video id="localVideo" autoplay muted></video>
+      <div id="remoteVideos"></div>
+    </div>
+
+    <button onclick="shareScreen()">Ekran Paylaş</button>
+
+    <div id="chat">
+      <div id="messages"></div>
+      <input type="text" id="messageInput" placeholder="Mesaj yaz..." />
+      <button onclick="sendMessage()">Gönder</button>
+    </div>
+  </div>
+
+  <!-- Kütüphaneler -->
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
