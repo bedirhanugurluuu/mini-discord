@@ -12,6 +12,11 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
+<<<<<<< HEAD
+=======
+    "peer": "^1.0.2",
+    "rnnoise-wasm": "^0.0.1-security",
+>>>>>>> dd67c90 (Initial commit - backend NodeJS peerjs + socket.io)
     "socket.io": "^4.8.1"
   }
 }
